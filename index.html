@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AS Jewels - By Aditi & Shalini | Handcrafted Artisan Jewelry India</title>
+
+  <!-- BRAND TYPOGRAPHY: Calligraphy Script for AS + High-End Serif for Subtitle -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS VARIABLES & RESET */
+    :root {
+      --bg-color: #faf8f5;
+      --card-bg: #ffffff;
+      --primary: #2c2a29;
+      --accent: #c49a6c;
+      --accent-hover: #a88154;
+      --text-muted: #736f6d;
+      --border-color: #e8e4df;
+      --font-main: 'Montserrat', system-ui, -apple-system, sans-serif;
+      --font-monogram: 'Pinyon Script', cursive;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --header-height: 80px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border-radius: 0 !important; /* STRICT NO ROUNDED CORNERS */
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--primary);
+      font-family: var(--font-main);
+      line-height: 1.6;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* HEADER & NAV */
+    header {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: var(--header-height);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* TYPOGRAPHIC BRAND LOGO (AS MONOGRAM + BY ADITI & SHALINI) */
+    .brand-container {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+      z-index: 1002;
+    }
+
+    .brand-logo-img {
+      width: 44px;
+      height: 44px;
+      object-fit: cover;
+
+    }
+
+    .brand-text-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .brand-monogram-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--primary);
+      line-height: 1.1;
+    }
+
+    .brand-monogram-title .script-as {
+      font-family: var(--font-monogram);
+      font-size: 1.8rem;
+      font-weight: normal;
+      color: var(--accent);
+      text-transform: none;
+      margin-right: 2px;
+    }
+
+    .brand-subtitle {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--primary);
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .hamburger-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--primary);
+      padding: 0.5rem;
+      z-index: 1002;
+    }
+
+    .cart-btn {
+      background: transparent;
+      border: 1px solid var(--primary);
+      padding: 0.45rem 1rem;
+      cursor: pointer;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+
+    .cart-btn:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .cart-count {
+      background: var(--accent);
+      color: white;
+      padding: 0.1rem 0.5rem;
+      font-size: 0.75rem;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      text-align: center;
+      padding: clamp(3.5rem, 10vw, 6.5rem) 1.5rem;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                  url('https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1200&q=80') center/cover;
+      color: white;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero p {
+      font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+      max-width: 600px;
+      margin: 0 auto 1.8rem auto;
+      font-weight: 300;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 0.8rem 2rem;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* FILTER BAR */
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      color: var(--text-muted);
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      color: var(--primary);
+      border-bottom-color: var(--accent);
+    }
+
+    /* PRODUCT GRID (SIDE BY SIDE) */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .product-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+    }
+
+    .product-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 260px;
+      overflow: hidden;
+    }
+
+    .product-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover .product-img {
+      transform: scale(1.03);
+    }
+
+    .product-info {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .product-category {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .product-title {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-price {
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .product-actions {
+      margin-top: auto;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .add-to-cart-btn {
+      flex: 1;
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      padding: 0.65rem;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s;
+      min-height: 44px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    .add-to-cart-btn:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .buy-now-btn {
+      flex: 1;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.65rem;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.2s;
+      min-height: 44px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    .buy-now-btn:hover {
+      background: var(--accent-hover);
+    }
+
+    /* PRODUCT DETAIL MODAL (PDP WITH HOVER ZOOM) */
+    .detail-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 2000;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .detail-modal.active {
+      display: flex;
+    }
+
+    .detail-card {
+      background: var(--card-bg);
+      max-width: 850px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      animation: modalFadeIn 0.25s ease-out;
+    }
+
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .close-detail {
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+      background: #f0f0f0;
+      border: none;
+      width: 32px;
+      height: 32px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* PDP IMAGE HOVER ZOOM CONTAINER */
+    .detail-img-container {
+      width: 100%;
+      height: 100%;
+      min-height: 350px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .detail-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease-in-out;
+      cursor: zoom-in;
+    }
+
+    /* PDP HOVER ZOOM EFFECT */
+    .detail-img-container:hover img {
+      transform: scale(1.5);
+    }
+
+    .detail-content {
+      padding: 2.5rem 2rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .detail-category {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .detail-title {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    .detail-price {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+    }
+
+    .detail-description {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .detail-specs {
+      list-style: none;
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .detail-specs li {
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .qty-selector {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .qty-btn {
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-color);
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qty-val {
+      font-weight: 600;
+      min-width: 20px;
+      text-align: center;
+    }
+
+    .pdp-action-group {
+      display: flex;
+      gap: 0.8rem;
+    }
+
+    .pdp-action-group .add-to-cart-btn,
+    .pdp-action-group .buy-now-btn {
+      flex: 1;
+      height: 48px;
+      font-size: 0.85rem;
+    }
+
+    /* CART DRAWER */
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      max-width: 400px;
+      height: 100%;
+      background: var(--card-bg);
+      box-shadow: -5px 0 25px rgba(0,0,0,0.1);
+      z-index: 1500;
+      transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cart-drawer.open {
+      right: 0;
+    }
+
+    .cart-header {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cart-header h3 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+    }
+
+    .close-cart {
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .cart-items {
+      padding: 1.5rem;
+      flex-grow: 1;
+      overflow-y: auto;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+      align-items: center;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .cart-item img {
+      width: 65px;
+      height: 65px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .cart-item-details {
+      flex-grow: 1;
+    }
+
+    .cart-item-title {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .cart-item-title:hover {
+      color: var(--accent);
+    }
+
+    .cart-item-price {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 0.2rem;
+    }
+
+    /* CART ITEM QUANTITY CONTROLS */
+    .cart-qty-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+
+    .cart-qty-btn {
+      width: 26px;
+      height: 26px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-color);
+      cursor: pointer;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cart-qty-num {
+      font-size: 0.85rem;
+      font-weight: 600;
+      min-width: 18px;
+      text-align: center;
+    }
+
+    .cart-footer {
+      padding: 1.5rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      background: var(--accent);
+      color: white;
+      padding: 0.9rem;
+      border: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      min-height: 48px;
+    }
+
+    /* OVERLAY */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 1400;
+      display: none;
+      backdrop-filter: blur(2px);
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--primary);
+      color: #dedede;
+      padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    /* RESPONSIVE MEDIA QUERIES */
+    @media (max-width: 1024px) {
+      .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hamburger-btn {
+        display: block;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        flex-direction: column;
+        padding: 5rem 2rem 2rem 2rem;
+        gap: 1.5rem;
+        box-shadow: 5px 0 25px rgba(0,0,0,0.15);
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1001;
+      }
+
+      .nav-links.active {
+        left: 0;
+      }
+
+      .nav-links a {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      /* SIDE-BY-SIDE MOBILE GRID (2 COLUMNS) */
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+      }
+
+      .product-img-wrapper {
+        height: 180px;
+      }
+
+      .product-info {
+        padding: 0.75rem;
+      }
+
+      .product-title {
+        font-size: 0.85rem;
+      }
+
+      .detail-card {
+        grid-template-columns: 1fr;
+        max-height: 85vh;
+      }
+
+      .detail-img-container {
+        height: 240px;
+        min-height: 240px;
+      }
+
+      .detail-content {
+        padding: 1.5rem;
+      }
+
+      .cart-btn span:not(.cart-count) {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav-container">
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">☰</button>
+
+      <!-- BRAND LOGO & DUAL TYPOGRAPHY BRANDING -->
+      <a href="#" class="brand-container">
+        <img src="assets/logo.png" alt="AS Jewels Logo" class="brand-logo-img">
+        <div class="brand-text-block">
+          <div class="brand-monogram-title">
+            <span class="script-as">AS</span> Jewels
+          </div>
+          <span class="brand-subtitle">By Aditi & Shalini</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#shop" onclick="closeMobileMenu()">Shop</a></li>
+        <li><a href="#about" onclick="closeMobileMenu()">Our Craft</a></li>
+        <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartToggle" aria-label="Open cart">
+          <span>Cart</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Handcrafted Elegance, Made for You</h1>
+    <p>Discover unique, artisan-made Indian jewelry designed with natural gemstones and sustainably sourced metals.</p>
+    <a href="#shop" class="btn-primary">Explore Collection</a>
+  </section>
+
+  <!-- MAIN SHOP SECTION -->
+  <main class="container" id="shop">
+    <!-- FILTER BUTTONS -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterProducts('all')">All Products</button>
+      <button class="filter-btn" onclick="filterProducts('Necklaces')">Necklaces</button>
+      <button class="filter-btn" onclick="filterProducts('Rings')">Rings</button>
+      <button class="filter-btn" onclick="filterProducts('Earrings')">Earrings</button>
+    </div>
+
+    <!-- PRODUCT CATALOG GRID -->
+    <div class="product-grid" id="productGrid"></div>
+  </main>
+
+  <!-- PRODUCT DETAIL MODAL (PDP WITH HOVER ZOOM) -->
+  <div class="detail-modal" id="detailModal">
+    <div class="detail-card">
+      <button class="close-detail" id="closeDetail">&times;</button>
+      <div class="detail-img-container" id="detailImgContainer">
+        <img id="detailImg" src="" alt="Product Detail Image">
+      </div>
+      <div class="detail-content">
+        <span class="detail-category" id="detailCategory"></span>
+        <h2 class="detail-title" id="detailTitle"></h2>
+        <div class="detail-price" id="detailPrice"></div>
+        <p class="detail-description" id="detailDescription"></p>
+
+        <ul class="detail-specs">
+          <li>✓ 100% Handcrafted Indian Artisan Piece</li>
+          <li>✓ Sustainably Sourced Precious Metals</li>
+          <li>✓ Hypoallergenic & Skin-Friendly</li>
+          <li>✓ Free Shipping Across India</li>
+        </ul>
+
+        <div class="qty-selector">
+          <span>Quantity:</span>
+          <button class="qty-btn" onclick="adjustDetailQty(-1)">-</button>
+          <span class="qty-val" id="detailQty">1</span>
+          <button class="qty-btn" onclick="adjustDetailQty(1)">+</button>
+        </div>
+
+        <div class="pdp-action-group">
+          <button class="add-to-cart-btn" id="detailAddToCartBtn">Add to Cart</button>
+          <button class="buy-now-btn" id="detailBuyNowBtn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CART DRAWER -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Shopping Bag</h3>
+      <button class="close-cart" id="closeCart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p style="text-align: center; color: var(--text-muted); margin-top: 2rem;">Your cart is currently empty.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 AS Jewels - By Aditi & Shalini. All rights reserved.</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // PRODUCT DATA (IN RUPEES ₹)
+    const products = [
+      {
+        id: 1,
+        title: "Raw Quartz Pendant",
+        category: "Necklaces",
+        price: 2499,
+        image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80",
+        description: "A stunning raw quartz crystal wrapped in delicate wire craftsmanship. Suspended on a fine 18k gold-plated chain."
+      },
+      {
+        id: 2,
+        title: "Hammered Gold Band",
+        category: "Rings",
+        price: 1899,
+        image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80",
+        description: "Hand-forged textured brass ring plated in 22k gold, capturing ambient light gracefully."
+      },
+      {
+        id: 3,
+        title: "Botanical Drop Earrings",
+        category: "Earrings",
+        price: 1599,
+        image: "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=600&q=80",
+        description: "Elegantly sculpted leaf motifs cast in recycled brass. Lightweight design suited for ethnic and western wear."
+      },
+      {
+        id: 4,
+        title: "Minimalist Opal Necklace",
+        category: "Necklaces",
+        price: 3299,
+        image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=600&q=80",
+        description: "A single natural opal bezel set in solid 925 sterling silver. Delicate, mesmerizing, and timeless."
+      }
+    ];
+
+    let cart = [];
+    let currentDetailProductId = null;
+    let detailQuantity = 1;
+
+    // DOM ELEMENTS
+    const productGrid = document.getElementById('productGrid');
+    const cartDrawer = document.getElementById('cartDrawer');
+    const overlay = document.getElementById('overlay');
+    const cartToggle = document.getElementById('cartToggle');
+    const closeCart = document.getElementById('closeCart');
+    const cartItemsContainer = document.getElementById('cartItems');
+    const cartCountEl = document.getElementById('cartCount');
+    const cartTotalEl = document.getElementById('cartTotal');
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    // DETAIL MODAL ELEMENTS
+    const detailModal = document.getElementById('detailModal');
+    const closeDetail = document.getElementById('closeDetail');
+    const detailImg = document.getElementById('detailImg');
+    const detailImgContainer = document.getElementById('detailImgContainer');
+    const detailCategory = document.getElementById('detailCategory');
+    const detailTitle = document.getElementById('detailTitle');
+    const detailPrice = document.getElementById('detailPrice');
+    const detailDescription = document.getElementById('detailDescription');
+    const detailQtyEl = document.getElementById('detailQty');
+    const detailAddToCartBtn = document.getElementById('detailAddToCartBtn');
+    const detailBuyNowBtn = document.getElementById('detailBuyNowBtn');
+
+    // FORMAT CURRENCY FOR INDIA (₹)
+    function formatINR(price) {
+      return '₹' + price.toLocaleString('en-IN');
+    }
+
+    // RENDER PRODUCTS
+    function renderProducts(items) {
+      productGrid.innerHTML = items.map(product => `
+        <div class="product-card" onclick="openDetailModal(${product.id})">
+          <div class="product-img-wrapper">
+            <img src="${product.image}" alt="${product.title}" class="product-img" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-category">${product.category}</span>
+            <h3 class="product-title">${product.title}</h3>
+            <div class="product-price">${formatINR(product.price)}</div>
+            <div class="product-actions" onclick="event.stopPropagation()">
+              <button class="add-to-cart-btn" id="btn-add-${product.id}" onclick="addToCartSilent(${product.id})">Add to Cart</button>
+              <button class="buy-now-btn" onclick="buyNowDirect(${product.id})">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // FILTER PRODUCTS
+    function filterProducts(category) {
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        if (btn.innerText.toLowerCase() === category.toLowerCase() || (category === 'all' && btn.innerText === 'All Products')) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      if (category === 'all') {
+        renderProducts(products);
+      } else {
+        const filtered = products.filter(p => p.category.toLowerCase() === category.toLowerCase());
+        renderProducts(filtered);
+      }
+    }
+
+    // ADD TO CART (WITH OVERWRITE MODE FOR PDP)
+    function addToCart(productId, count = 1, forceSetQuantity = false) {
+      const product = products.find(p => p.id === productId);
+      const existingItem = cart.find(item => item.id === productId);
+
+      if (existingItem) {
+        if (forceSetQuantity) {
+          existingItem.quantity = count;
+        } else {
+          existingItem.quantity += count;
+        }
+      } else {
+        cart.push({ ...product, quantity: count });
+      }
+
+      updateCart();
+    }
+
+    function addToCartSilent(productId, count = 1, forceSetQuantity = false) {
+      addToCart(productId, count, forceSetQuantity);
+
+      // Card Button Feedback
+      const cardBtn = document.getElementById(`btn-add-${productId}`);
+      if (cardBtn) {
+        const originalText = cardBtn.innerText;
+        cardBtn.innerText = "✓ Added";
+        cardBtn.style.background = "var(--primary)";
+        cardBtn.style.color = "white";
+        setTimeout(() => {
+          cardBtn.innerText = originalText;
+          cardBtn.style.background = "transparent";
+          cardBtn.style.color = "var(--primary)";
+        }, 1200);
+      }
+    }
+
+    // BUY NOW DIRECT ACTION
+    function buyNowDirect(productId, count = 1, forceSetQuantity = false) {
+      addToCart(productId, count, forceSetQuantity);
+      openCartDrawer();
+    }
+
+    // CART QUANTITY ADJUSTMENTS
+    function changeCartQuantity(productId, delta) {
+      const item = cart.find(i => i.id === productId);
+      if (item) {
+        item.quantity += delta;
+        if (item.quantity <= 0) {
+          cart = cart.filter(i => i.id !== productId);
+        }
+      }
+      updateCart();
+    }
+
+    function updateCart() {
+      const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+      cartCountEl.innerText = totalCount;
+
+      const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+      cartTotalEl.innerText = formatINR(totalPrice);
+
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p style="text-align: center; color: var(--text-muted); margin-top: 2rem;">Your cart is currently empty.</p>';
+      } else {
+        cartItemsContainer.innerHTML = cart.map(item => `
+          <div class="cart-item">
+            <img src="${item.image}" alt="${item.title}" onclick="openDetailModal(${item.id})">
+            <div class="cart-item-details">
+              <div class="cart-item-title" onclick="openDetailModal(${item.id})">${item.title}</div>
+              <div class="cart-item-price">${formatINR(item.price)}</div>
+              <div class="cart-qty-controls">
+                <button class="cart-qty-btn" onclick="changeCartQuantity(${item.id}, -1)">-</button>
+                <span class="cart-qty-num">${item.quantity}</span>
+                <button class="cart-qty-btn" onclick="changeCartQuantity(${item.id}, 1)">+</button>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    // PRODUCT DETAIL MODAL LOGIC (PDP)
+    function openDetailModal(productId) {
+      const product = products.find(p => p.id === productId);
+      if (!product) return;
+
+      currentDetailProductId = productId;
+
+      const cartItem = cart.find(i => i.id === productId);
+      detailQuantity = cartItem ? cartItem.quantity : 1;
+      detailQtyEl.innerText = detailQuantity;
+
+      detailImg.src = product.image;
+      detailCategory.innerText = product.category;
+      detailTitle.innerText = product.title;
+      detailPrice.innerText = formatINR(product.price);
+      detailDescription.innerText = product.description;
+
+      detailAddToCartBtn.onclick = () => {
+        addToCartSilent(productId, detailQuantity, true);
+        detailAddToCartBtn.innerText = "✓ Added";
+        detailAddToCartBtn.style.background = "var(--primary)";
+        detailAddToCartBtn.style.color = "white";
+        setTimeout(() => {
+          detailAddToCartBtn.innerText = "Add to Cart";
+          detailAddToCartBtn.style.background = "transparent";
+          detailAddToCartBtn.style.color = "var(--primary)";
+        }, 1200);
+      };
+
+      detailBuyNowBtn.onclick = () => {
+        buyNowDirect(productId, detailQuantity, true);
+        closeDetailModal();
+      };
+
+      detailModal.classList.add('active');
+    }
+
+    function closeDetailModal() {
+      detailModal.classList.remove('active');
+    }
+
+    function adjustDetailQty(delta) {
+      detailQuantity = Math.max(1, detailQuantity + delta);
+      detailQtyEl.innerText = detailQuantity;
+    }
+
+    // PDP CURSOR PAN ZOOM EFFECT ON HOVER
+    detailImgContainer.addEventListener('mousemove', (e) => {
+      const rect = detailImgContainer.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      detailImg.style.transformOrigin = `${x}% ${y}%`;
+    });
+
+    detailImgContainer.addEventListener('mouseleave', () => {
+      detailImg.style.transformOrigin = 'center center';
+    });
+
+    // UI CONTROLS
+    function openCartDrawer() {
+      closeMobileMenu();
+      closeDetailModal();
+      cartDrawer.classList.add('open');
+      overlay.classList.add('active');
+    }
+
+    function closeCartDrawer() {
+      cartDrawer.classList.remove('open');
+      overlay.classList.remove('active');
+    }
+
+    function toggleMobileMenu() {
+      closeCartDrawer();
+      navLinks.classList.toggle('active');
+      if (navLinks.classList.contains('active')) {
+        overlay.classList.add('active');
+      } else {
+        overlay.classList.remove('active');
+      }
+    }
+
+    function closeMobileMenu() {
+      navLinks.classList.remove('active');
+      overlay.classList.remove('active');
+    }
+
+    function checkout() {
+      if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+      }
+      alert("Proceeding to checkout! Integrated for Indian UPI, Paytm, NetBanking, and COD.");
+    }
+
+    // EVENT LISTENERS
+    cartToggle.addEventListener('click', openCartDrawer);
+    closeCart.addEventListener('click', closeCartDrawer);
+    closeDetail.addEventListener('click', closeDetailModal);
+    hamburgerBtn.addEventListener('click', toggleMobileMenu);
+
+    overlay.addEventListener('click', () => {
+      closeCartDrawer();
+      closeMobileMenu();
+    });
+
+    detailModal.addEventListener('click', (e) => {
+      if (e.target === detailModal) closeDetailModal();
+    });
+
+    // INITIAL RENDER
+    renderProducts(products);
+  </script>
+</body>
+</html>
